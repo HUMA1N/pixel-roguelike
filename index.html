@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+    <meta name="theme-color" content="#1b2130" />
+    <title>Пиксельный выживальщик</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <canvas id="game"></canvas>
+
+    <button id="pauseBtn" class="icon-btn hidden" aria-label="Пауза">❚❚</button>
+
+    <div id="screen-start" class="screen">
+      <div class="panel">
+        <h1>Пиксельный<br />выживальщик</h1>
+        <p>Враги идут со всех сторон. Герой стреляет сам — ваша задача двигаться и выживать.</p>
+        <p class="hint">
+          <b>Компьютер:</b> стрелки или WASD, пауза — Esc.<br />
+          <b>Телефон:</b> коснитесь экрана и ведите пальцем.
+        </p>
+        <p class="hint">
+          Собирайте кристаллы опыта. На каждом новом уровне выбирайте одно из трёх улучшений.
+          Каждые 3 минуты приходит босс.
+        </p>
+        <p class="best"></p>
+        <button id="startBtn" class="btn">Играть</button>
+      </div>
+    </div>
+
+    <div id="screen-pause" class="screen hidden">
+      <div class="panel">
+        <h2>Пауза</h2>
+        <ul id="pause-list" class="upgrade-list"></ul>
+        <button id="resumeBtn" class="btn">Продолжить</button>
+        <div class="row">
+          <button id="muteBtn" class="btn small">Звук: вкл</button>
+          <button id="menuBtn" class="btn small">В меню</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="screen-levelup" class="screen hidden">
+      <div class="panel wide">
+        <h2 id="levelup-title">Новый уровень!</h2>
+        <p class="hint">Выберите улучшение (клавиши 1, 2, 3 или касание)</p>
+        <div id="choices"></div>
+      </div>
+    </div>
+
+    <div id="screen-over" class="screen hidden">
+      <div class="panel">
+        <h2>Герой пал</h2>
+        <p id="over-stats"></p>
+        <p id="over-new" class="new-record hidden">Новый рекорд!</p>
+        <p class="best"></p>
+        <button id="againBtn" class="btn">Ещё раз</button>
+      </div>
+    </div>
+
+    <script src="js/utils.js"></script>
+    <script src="js/enemies.js"></script>
+    <script src="js/upgrades.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/sprites.js"></script>
+    <script src="js/render.js"></script>
+    <script src="js/input.js"></script>
+    <script src="js/audio.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
