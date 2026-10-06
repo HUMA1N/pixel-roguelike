@@ -116,3 +116,107 @@ p {
   cursor: pointer;
   z-index: 5;
 }
+
+.panel.wide {
+  max-width: 560px;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn.small {
+  padding: 8px 16px;
+  font-size: 15px;
+}
+
+.upgrade-list {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0;
+  text-align: left;
+  font-size: 15px;
+}
+
+.upgrade-list li {
+  padding: 3px 0;
+}
+
+.ico {
+  display: inline-block;
+  width: 1.4em;
+  text-align: center;
+  font-weight: bold;
+}
+
+#choices {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 12px 14px;
+  text-align: left;
+  color: #f0f0f0;
+  background: #1b2130;
+  border: 3px solid #4a5878;
+  cursor: pointer;
+  font: inherit;
+}
+
+.card:hover,
+.card:focus-visible {
+  border-color: #ffd84a;
+  background: #222a3d;
+  outline: none;
+}
+
+.card .ico {
+  font-size: 30px;
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
+  flex: none;
+  background: #0f1220;
+}
+
+.card .key {
+  position: absolute;
+  top: 4px;
+  right: 8px;
+  font: bold 12px monospace;
+  color: #6b7a9c;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.card-title {
+  font-weight: bold;
+  font-size: 17px;
+  color: #ffd84a;
+}
+
+.card-level {
+  font-size: 12px;
+  color: #8fe3ff;
+  font-family: monospace;
+}
+
+.card-text {
+  font-size: 14px;
+  color: #c9d2e8;
+}

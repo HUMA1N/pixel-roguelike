@@ -20,6 +20,10 @@
           <b>Компьютер:</b> стрелки или WASD, пауза — Esc.<br />
           <b>Телефон:</b> коснитесь экрана и ведите пальцем.
         </p>
+        <p class="hint">
+          Собирайте кристаллы опыта. На каждом новом уровне выбирайте одно из трёх улучшений.
+          Каждые 3 минуты приходит босс.
+        </p>
         <p class="best"></p>
         <button id="startBtn" class="btn">Играть</button>
       </div>
@@ -28,7 +32,20 @@
     <div id="screen-pause" class="screen hidden">
       <div class="panel">
         <h2>Пауза</h2>
+        <ul id="pause-list" class="upgrade-list"></ul>
         <button id="resumeBtn" class="btn">Продолжить</button>
+        <div class="row">
+          <button id="muteBtn" class="btn small">Звук: вкл</button>
+          <button id="menuBtn" class="btn small">В меню</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="screen-levelup" class="screen hidden">
+      <div class="panel wide">
+        <h2 id="levelup-title">Новый уровень!</h2>
+        <p class="hint">Выберите улучшение (клавиши 1, 2, 3 или касание)</p>
+        <div id="choices"></div>
       </div>
     </div>
 
@@ -43,10 +60,13 @@
     </div>
 
     <script src="js/utils.js"></script>
+    <script src="js/enemies.js"></script>
+    <script src="js/upgrades.js"></script>
     <script src="js/game.js"></script>
     <script src="js/sprites.js"></script>
     <script src="js/render.js"></script>
     <script src="js/input.js"></script>
+    <script src="js/audio.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
